@@ -1,5 +1,5 @@
 ---
-layout: guide
+layout: null
 title: Python Repair Agent Lab: Pre-lab Setup
 ---
 
