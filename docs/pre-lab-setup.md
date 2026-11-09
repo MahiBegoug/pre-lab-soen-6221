@@ -43,10 +43,7 @@ not turn into account setup during the lab.
 
 ## Preparation flow
 
-Sign in to your GitHub account in a browser before starting. You do not need to
-fork or clone the repository today.
-
-<div id="preparation-flow" aria-live="polite">Loading the preparation flow…</div>
+<div id="preparation-flow" aria-live="polite"></div>
 
 <ol id="preparation-flow-fallback">
   <li>Install and check Git, Python, and Docker.</li>
@@ -59,11 +56,6 @@ fork or clone the repository today.
 </ol>
 
 <script src="assets/preparation-flow.js" defer></script>
-
-> **Diagram note.** The page draws this workflow with the repository's own
-> JavaScript file, [`preparation-flow.js`](assets/preparation-flow.js). It is
-> not an AI-generated image and uses no external library or CDN. The numbered
-> text list remains available when JavaScript is disabled.
 
 ## 1. Install and check the local tools
 
