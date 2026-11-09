@@ -44,27 +44,7 @@ not turn into account setup during the lab.
 Sign in to your GitHub account in a browser before starting. You do not need to
 fork or clone the repository today.
 
-```mermaid
-flowchart LR
-    tools["(1) Install Git, Python, Docker"] --> python["(2) Prepare a small Python environment"]
-    python --> vibe["(3) Sign in to one vibe-coding assistant"]
-    vibe --> model["(4) Test local Ollama or one cloud API"]
-    model --> github["(5) Test a restricted GitHub token"]
-    github --> langfuse["(6) Test Langfuse Cloud"]
-    langfuse --> ready["(7) Final readiness check"]
-
-    classDef toolBox fill:#dbeafe,stroke:#2563eb,color:#172554
-    classDef setupBox fill:#ffedd5,stroke:#ea580c,color:#7c2d12
-    classDef modelBox fill:#dcfce7,stroke:#16a34a,color:#14532d
-    classDef serviceBox fill:#fef3c7,stroke:#d97706,color:#78350f
-    classDef checkBox fill:#e0f2fe,stroke:#0284c7,color:#0c4a6e
-
-    class tools toolBox
-    class python,vibe setupBox
-    class model modelBox
-    class github,langfuse serviceBox
-    class ready checkBox
-```
+![Preparation flow: install local tools; prepare a small Python environment; choose a vibe-coding assistant; test a repair-model route; test GitHub and Langfuse connections; then complete a final readiness check.](assets/preparation-flow.svg)
 
 ## 1. Install and check the local tools
 
