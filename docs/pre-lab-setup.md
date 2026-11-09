@@ -1,7 +1,7 @@
----
-layout: null
-title: Python Repair Agent Lab: Pre-lab Setup
----
+<style>
+  .container-lg.px-3.my-5.markdown-body > h1:first-child { display: none; }
+</style>
+<script>document.title = "Python Repair Agent Lab: Pre-lab Setup";</script>
 
 <h1 align="center">Python Repair Agent Lab: Pre-lab Setup</h1>
 
