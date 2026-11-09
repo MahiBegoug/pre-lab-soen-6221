@@ -24,7 +24,7 @@ a common confusion.
 | Item | Its role in this activity |
 | --- | --- |
 | A vibe-coding assistant | Helps you create and review the lab code. Choose Codex, Claude Code, or Cursor. It is not the model that your repair agent calls. |
-| A repair-model route | Supplies the live model response during the lab. Prefer local Ollama with Qwen; use one cloud API only if local storage or memory is not sufficient. |
+| A repair-model route | Supplies the live model response during the lab. Choose a local, code-capable Ollama model that suits your laptop; `qwen2.5-coder:7b` is the tested example. Use one cloud API only if local storage or memory is not sufficient. |
 | GitHub | Stores your work. A separate, restricted token can later support bounded code research. |
 | Langfuse Cloud | Can record the public repair trajectory for later inspection. |
 
@@ -32,12 +32,14 @@ The required scripted checkpoints work without a live LLM. We nevertheless
 prepare a live-model route, GitHub, and Langfuse now so that optional work does
 not turn into account setup during the lab.
 
-> **Cost and credential rule.** We strongly recommend local Ollama and
-> `qwen2.5-coder:7b`. If your computer cannot store or run it, you may choose a
-> cloud provider. You are responsible for creating that account, accepting its
-> terms, and every charge to its payment method or credits. Never put a key or
-> token in a Git commit, source file, screenshot, or chat with a coding
-> assistant.
+> **Model, cost, and credential rule.** We tested the local example with
+> `qwen2.5-coder:7b`; it is not the only allowed local model. Choose a
+> code-capable Ollama model that fits your available disk space, memory, and
+> preferred response speed. If your computer cannot run a suitable local model,
+> you may choose a cloud provider. You are responsible for creating that
+> account, accepting its terms, and every charge to its payment method or
+> credits. Never put a key or token in a Git commit, source file, screenshot,
+> or chat with a coding assistant.
 
 ## Preparation flow
 
@@ -45,6 +47,10 @@ Sign in to your GitHub account in a browser before starting. You do not need to
 fork or clone the repository today.
 
 ![Preparation flow: install local tools; prepare a small Python environment; choose a vibe-coding assistant; test a repair-model route; test GitHub and Langfuse connections; then complete a final readiness check.](assets/preparation-flow.svg)
+
+> **Diagram note.** This is a hand-authored SVG diagram stored in this
+> repository, not an AI-generated image. It has no JavaScript, CDN, or external
+> diagram-service dependency.
 
 ## 1. Install and check the local tools
 
@@ -145,14 +151,15 @@ repair model described next.
 ## 4. Choose and test one repair-model route
 
 Choose one route. Route A is strongly preferred because it keeps the repair
-model on your computer. Route B is a fallback only for machines with limited
-storage or memory. This test asks a model for a short text response; it does
-not run project code.
+model on your computer. Select its model based on your laptop's available disk
+space, memory, and the response speed you can accept. Route B is a fallback
+only for machines that cannot run a suitable local model. This test asks a
+model for a short text response; it does not run project code.
 
-### Route A: local Ollama with Qwen, preferred
+### Route A: local Ollama model, preferred
 
 Install Ollama from the [official download page](https://ollama.com/download).
-After installation, open a new terminal and run:
+After installation, open a new terminal and run the tested example:
 
 ```bash
 ollama --version
@@ -160,9 +167,17 @@ ollama pull qwen2.5-coder:7b
 ollama run qwen2.5-coder:7b "Reply exactly: OLLAMA READY"
 ```
 
-The download is roughly 5 GB and the first response may take longer than later
-ones. Success means the last command returns `OLLAMA READY` (minor punctuation
-is harmless). Leave the model installed and verify it is visible:
+`qwen2.5-coder:7b` is a reference configuration that we ran successfully. You
+may instead choose another code-capable local model from the
+[Ollama library](https://ollama.com/library). Replace
+`qwen2.5-coder:7b` in both commands with its exact Ollama model tag. A smaller
+model usually needs less disk space and memory, but may produce less reliable
+repairs.
+
+The Qwen example download is roughly 5 GB and the first response may take
+longer than later ones. Success means the last command returns `OLLAMA READY`
+(minor punctuation is harmless). Leave your chosen model installed and verify
+it is visible:
 
 ```bash
 ollama list
