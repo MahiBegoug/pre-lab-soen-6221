@@ -46,11 +46,24 @@ not turn into account setup during the lab.
 Sign in to your GitHub account in a browser before starting. You do not need to
 fork or clone the repository today.
 
-![Preparation flow: install local tools; prepare a small Python environment; choose a vibe-coding assistant; test a repair-model route; test GitHub and Langfuse connections; then complete a final readiness check.](assets/preparation-flow.svg)
+<div id="preparation-flow" aria-live="polite">Loading the preparation flow…</div>
 
-> **Diagram note.** This is a hand-authored SVG diagram stored in this
-> repository, not an AI-generated image. It has no JavaScript, CDN, or external
-> diagram-service dependency.
+<ol id="preparation-flow-fallback">
+  <li>Install and check Git, Python, and Docker.</li>
+  <li>Prepare a small Python environment for connection checks.</li>
+  <li>Choose one vibe-coding assistant.</li>
+  <li>Test a local repair model or one cloud API.</li>
+  <li>Test a restricted GitHub token.</li>
+  <li>Test Langfuse Cloud.</li>
+  <li>Complete the final readiness check.</li>
+</ol>
+
+<script src="assets/preparation-flow.js" defer></script>
+
+> **Diagram note.** The page draws this workflow with the repository's own
+> JavaScript file, [`preparation-flow.js`](assets/preparation-flow.js). It is
+> not an AI-generated image and uses no external library or CDN. The numbered
+> text list remains available when JavaScript is disabled.
 
 ## 1. Install and check the local tools
 
