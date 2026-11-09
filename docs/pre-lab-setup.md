@@ -1,3 +1,8 @@
+---
+layout: guide
+title: Python Repair Agent Lab: Pre-lab Setup
+---
+
 <h1 align="center">Python Repair Agent Lab: Pre-lab Setup</h1>
 
 <p align="center">
