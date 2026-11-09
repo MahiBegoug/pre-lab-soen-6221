@@ -1,4 +1,4 @@
-# Software Engineering for AI
+# SOEN 6221: Software Engineering for AI
 
 ## Python Repair Agent Lab: Pre-lab Setup
 

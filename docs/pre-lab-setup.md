@@ -1,7 +1,7 @@
 <h1 align="center">Python Repair Agent Lab: Pre-lab Setup</h1>
 
 <p align="center">
-  <strong>Software Engineering for AI</strong><br>
+  <strong>SOEN 6221: Software Engineering for AI</strong><br>
   Course team: Emad Shihab, Mahi Begoug, and Musfiqur Rahman
 </p>
 
